@@ -5,6 +5,15 @@ You also need to define R.id.item_click_support using ids.xml
 <resources>
     <item name="item_click_support" type="id" />
 </resources>
+
+The resulting code to hook up a click listener now looks like this:
+
+ItemClickSupport.addTo(mRecyclerView).setOnItemClickListener(new ItemClickSupport.OnItemClickListener() {
+    @Override
+    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+        // do it
+    }
+});
 */
 
 import android.support.v7.widget.RecyclerView;
